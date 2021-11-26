@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>波浪涌动</title>
+    <style>
+        body{
+            height: 90vh;
+            background:#555;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+        }
+        #wavBox{
+            --width:80vw;
+            width: var(--width);
+            height: 50vh;
+            background:#49e;
+            position: relative;
+            overflow: hidden;
+        }
+        .wav{
+            background:#fffa;
+            animation:8s wav linear infinite;
+            animation-delay:calc(-0.5s*var(--i));
+        }
+        .wav:nth-of-type(odd){
+            width: 200vw;
+            height: 200vw;
+            position: absolute;
+            border-radius:80vw;         /*radius={width/2*0.8}*/
+            top:-190vw;                 /*top={-width+10vw}*/
+            left:-60vw;                 /*left={-(width-var(--width))/2}*/
+        }
+        .wav:nth-of-type(even){
+            width: 205vw;
+            height: 205vw;
+            position: absolute;
+            border-radius:83vw;         /*radius={width/2*0.8}*/
+            top:-195vw;                 /*top={-width+10vw}*/
+            left:-62vw;                 /*left={-(width-var(--width))/2}*/
+        }
+        @keyframes wav{
+            0%{
+                transform:rotatez(0deg);
+            }
+            100%{
+                transform:rotatez(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wavBox">
+        <div class="wav" style="--i:1"></div>
+        <div class="wav" style="--i:2"></div>
+        <div class="wav" style="--i:3"></div>
+    </div>
+</body>
+</html>

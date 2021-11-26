@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>弥散渐变</title>
+    <style>
+        body{
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            background-image: radial-gradient(closest-side, rgb(42, 231, 184) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(154, 221, 29) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(30, 170, 235) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(212, 231, 42) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(0, 255, 76) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(38, 245, 234) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(42, 231, 184) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(154, 221, 29) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(30, 170, 235) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(212, 231, 42) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(0, 255, 76) , rgba(0,0,0,0)),
+                radial-gradient(closest-side, rgb(38, 245, 234) , rgba(0,0,0,0));
+            background-repeat: no-repeat;
+            background-size: 40vw 40vw,
+            40vw 40vw,
+            50vw 50vw,
+            60vw 60vw,
+            50vw 50vw,
+            60vw 60vw,
+            60vw 60vw,
+            50vw 50vw,
+            40vw 40vw,
+            40vw 40vw,
+            50vw 50vw,
+            40vw 40vw;
+            background-position: 50% 60%,
+            100% 50%,
+            120% 130%,
+            130% -20%,
+            10% 50%,
+            -30% -20%,
+            60% 130%,
+            80% 10%,
+            -10% 120%,
+            30% 10%,
+            100% 30%,
+            0% 100%;
+            backdrop-filter: blur(50px);
+            background-color: rgb(223, 245, 174);
+            animation: 6s circleLoop linear infinite;
+            }
+
+            body::after{
+                content: '';
+                display: block;
+                width: 100vw;
+                height: 100vh;
+                filter: blur(100px);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+            @keyframes circleLoop{
+                0%,100%{background-size: 40vw 40vw,
+                    40vw 40vw,
+                    50vw 50vw,
+                    60vw 60vw,
+                    50vw 50vw,
+                    60vw 60vw,
+                    60vw 60vw,
+                    50vw 50vw,
+                    40vw 40vw,
+                    40vw 40vw,
+                    50vw 50vw,
+                    40vw 40vw;
+                    background-position: 50% 60%,
+                    100% 50%,
+                    120% 130%,
+                    130% -20%,
+                    10% 50%,
+                    -30% -20%,
+                    60% 130%,
+                    80% 10%,
+                    -10% 120%,
+                    30% 10%,
+                    100% 30%,
+                    0% 100%;
+                }
+                25%{
+                    background-size: 70vw 70vw,
+                    40vw 40vw,
+                    80vw 80vw,
+                    60vw 60vw,
+                    70vw 70vw,
+                    60vw 60vw,
+                    60vw 60vw,
+                    70vw 70vw,
+                    40vw 40vw,
+                    60vw 60vw,
+                    50vw 50vw,
+                    40vw 40vw;
+                    background-position: 50% 60%,
+                    140% 60%,
+                    100% 100%,
+                    100% -10%,
+                    10% 50%,
+                    -30% -20%,
+                    80% 100%,
+                    70% 0%,
+                    -10% 120%,
+                    30% 10%,
+                    100% 30%,
+                    0% 100%;
+                }
+                75%{
+                    background-size: 40vw 40vw,
+                    40vw 40vw,
+                    50vw 50vw,
+                    90vw 90vw,
+                    50vw 50vw,
+                    60vw 60vw,
+                    60vw 60vw,
+                    50vw 50vw,
+                    60vw 60vw,
+                    40vw 40vw,
+                    80vw 80vw,
+                    40vw 40vw;
+                    background-position: 50% 60%,
+                    100% 50%,
+                    130% 120%,
+                    130% -20%,
+                    10% 50%,
+                    -30% -20%,
+                    60% 130%,
+                    80% 10%,
+                    -10% 120%,
+                    30% 10%,
+                    100% 30%,
+                    0% 100%;
+                }
+            }
+
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

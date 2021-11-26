@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>流光字体</title>
+
+    <style>
+        body{
+            background-color: #333;
+            display: flex;
+            height: 95vh;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1{
+            color: transparent;
+            font-family: cursive;
+            font-size: 8vw;
+        }
+        h1 span{
+            animation: liuguang 2s linear infinite;
+            animation-delay: calc(0.1s * var(--i));
+        }
+        @keyframes liuguang {
+            0%{
+                color: #fff;
+                filter:blur(1px) hue-rotate(0deg);
+                text-shadow: 0 0 30px rgb(0, 0, 0),
+                0 0 60px rgb(0, 0, 0),
+                0 0 90px rgb(0, 0, 0),
+                0 0 120px rgb(0, 0, 0)
+                ;
+            }
+            30%,70%{
+                color: #fff;
+                filter:blur(2px) hue-rotate(360deg);
+                text-shadow: 0 0 30px rgb(0, 153, 255),
+                0 0 60px rgb(0, 153, 255),
+                0 0 90px rgb(0, 153, 255),
+                0 0 120px rgb(0, 153, 255)
+                ;
+            }
+            100%{
+                color: transparent;
+                text-shadow: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>
+        <span style="--i:1">流</span>
+        <span style="--i:2">光</span>
+        <span style="--i:3">字</span>
+        <span style="--i:4">体</span>
+    </h1>
+</body>
+</html>
